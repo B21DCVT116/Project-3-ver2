@@ -14,10 +14,9 @@ const fetchApi = async (api) =>{
 }
 
 function renderProduct(){
-    const api = `http://localhost:3000/products?q=${query.search}&_page=${query.page}&_limit=${query.limit}&_sort=${query.sort}&_order=${query.order}`;
+    const api = `https://console.firebase.google.com/project/project-3-c3124/database/project-3-c3124-default-rtdb/data/~2F/products?q=${query.search}&_page=${query.page}&_limit=${query.limit}&_sort=${query.sort}&_order=${query.order}`;
     fetchApi(api)
         .then ((data)=>{
-            console.log(data);
             let product = data.map(item => (
                 `
                 <div class="product">
