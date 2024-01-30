@@ -46,7 +46,7 @@ function searchInput(){
 }
 
 function pageNumber(){
-    const api = `http://localhost:3000/products?q=${query.search}&_page=&_limit=&_sort=${query.sort}&_order=${query.order}`;
+    const api = `https://console.firebase.google.com/project/project-3-c3124/database/project-3-c3124-default-rtdb/data/~2F/products?q=${query.search}&_page=&_limit=&_sort=${query.sort}&_order=${query.order}`;
     fetchApi(api)
         .then ((data)=>{
             console.log(data);
@@ -71,7 +71,7 @@ function handlePageNumber (pageNum){
 
 //Hiển thị danh mục sản phẩm
 function renderListProduct(){
-    const api = `http://localhost:3000/categories`;
+    const api = `https://console.firebase.google.com/project/project-3-c3124/database/project-3-c3124-default-rtdb/data/~2F/categories`;
     fetchApi(api)
         .then ((data)=>{
             console.log(data);
